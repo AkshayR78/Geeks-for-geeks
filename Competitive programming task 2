@@ -1,0 +1,33 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int arrays[6]={1,2,3,4,5,6};
+
+void relocate_print(int in, int arrays[6], int nu){
+	for(int u=6; u>in;u=u-1){
+	 arrays[u]=arrays[u-1];
+	 }
+
+	arrays[in]=nu;
+
+	for(int i=0; i<=6; i++){
+	 cout << arrays[i]<<"\n";
+	 }
+	return;
+}
+
+
+int main(){
+	int num;int index;
+	cout<< "Enter a number:";
+	cin>>num;
+	cout<<"Enter index:";
+	cin>>index;
+	
+    relocate_print(index,arrays,num);
+
+
+	return 0;
+
+}
